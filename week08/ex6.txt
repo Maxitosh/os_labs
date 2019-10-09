@@ -1,0 +1,3 @@
+We have 16 bit address and 8kb page
+To have offset equal to 8kb we need 2^13 bits -> 13 bits are used for offset
+16 - 13 = 3(free bits) -> 2^3 = 8 entries in page table
