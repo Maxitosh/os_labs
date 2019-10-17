@@ -1,0 +1,14 @@
+
+Let's take for example 5 frames of real memory
+
+INCREASING
+Given sequence of references such 1 2 3 4 5 1 2 3 4 5 1 2 3 4 5 and so on
+Gives us 5 misses at first and each tick of time increase hits by 5
+For given example now ratio is 15/5=3 and it is increasing providing sequence using such cyclic pattern
+
+DECREASING
+To get such situation we have to have some hits, otherwise ration=hit/miss will be 0
+That's why we cannot use sequence like 1 2 3 4 5 6 7 8 9 10 and so on.
+To make decreasing sequence let's use previous example and add one or two more different pages
+Like 1 2 3 4 5 6 1 2 3 4 5 6 1 2 3 4 5 6 and ratio is 3/18=0.167
+Each round it decreases, because number of pages is bigger than number of available framess
