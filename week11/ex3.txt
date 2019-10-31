@@ -1,0 +1,12 @@
+Pr 1:
+Prints:
+Hello
+Hello
+Child and parent  have the same buffer. Second printf - prints everything
+
+Pr 2
+Prints:
+Hello
+\n
+\n
+Child's buffer inherited from parent process that is why printf in child executed twice
