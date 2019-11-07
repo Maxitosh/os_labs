@@ -1,0 +1,31 @@
+Compile and run - file is about 4.6mb
+MacBook-Pro-Maks-3:lab12 maxitosh$ gcc copy.c -o copy
+MacBook-Pro-Maks-3:lab12 maxitosh$ time ./copy 1.heic 2.heic
+
+real	0m0.328s
+user	0m0.003s
+sys	0m0.025s
+
+changed buf_size to 256
+MacBook-Pro-Maks-3:lab12 maxitosh$ gcc -DBUF_SIZE=256 copy.c -o copy
+MacBook-Pro-Maks-3:lab12 maxitosh$ time ./copy 1.heic 2.heic
+
+real	0m0.400s
+user	0m0.010s
+sys	0m0.057s
+
+O_SYNC is on
+MacBook-Pro-Maks-3:lab12 maxitosh$ gcc copy.c -o copy
+MacBook-Pro-Maks-3:lab12 maxitosh$ time ./copy 1.heic 2.heic
+
+real	0m0.596s
+user	0m0.004s
+sys	0m0.132s
+
+O_SYNC is on and buffer_size is 256
+MacBook-Pro-Maks-3:lab12 maxitosh$ gcc -DBUF_SIZE=256 copy.c -o copy
+MacBook-Pro-Maks-3:lab12 maxitosh$ time ./copy 1.heic 2.heic
+
+real	0m1.164s
+user	0m0.013s
+sys	0m0.447s
